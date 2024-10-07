@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 960px;
+    width: 960px;
+}
+
+.divs {
+    flex-basis:calc(100% / 6);
+    aspect-ratio: 1/1;
+    background-color: rgb(255, 255, 255);
+}
+.divs:hover {
+    background-color: rgb(146, 147, 147);
+    transition: background-color 0.10s;
+}
