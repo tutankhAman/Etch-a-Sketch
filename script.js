@@ -25,7 +25,7 @@ function createGrid(gridCount){
 
     const divChange = document.querySelectorAll(".divs");
     divChange.forEach(div => {
-        div.style.flex = `0 0 calc(100% / ${gridCount})`; // Adjust size per grid count
+        div.style.flexBasis = `calc(100% / ${gridCount})`; // Adjust size per grid count
     });
 }
 

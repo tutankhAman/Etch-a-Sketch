@@ -2,16 +2,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    height: 960px;
-    width: 960px;
+    aspect-ratio: 1/1;
+    height: 800px;
+    width: 800px;
+    border-style:solid;
+
 }
 
 .divs {
     flex-basis:calc(100% / 6);
     aspect-ratio: 1/1;
     background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+
 }
 .divs:hover {
     background-color: rgb(146, 147, 147);
-    transition: background-color 0.10s;
+    transition: background-color 0.1s;
 }
