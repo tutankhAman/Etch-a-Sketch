@@ -1,12 +1,33 @@
-.container {
+body {
+    background-color: beige;
+}
+.canvas-container {
+    text-align:center;
+    
+}
+
+.canvas {
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    background-color: white;
     aspect-ratio: 1/1;
     height: 800px;
     width: 800px;
     border-style:solid;
+    box-shadow: 0px 1px 20px grey;
+    border-radius: 0.5rem;
+}
 
+.grid-size {
+    text-align: center;
+    padding: 1rem;
+    margin: 0.6rem;
+    border-style:none;
+    background: rgb(255, 232, 236);
+    border-radius: 1rem;
+    box-shadow: 0px 1px 20px grey;
 }
 
 .divs {
@@ -14,9 +35,10 @@
     aspect-ratio: 1/1;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
+    transition: background-color 0.3s ease;
 
 }
 .divs:hover {
     background-color: rgb(146, 147, 147);
-    transition: background-color 0.1s;
+    /* transition: background-color 0.1s; */
 }

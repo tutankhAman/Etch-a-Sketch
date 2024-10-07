@@ -4,14 +4,25 @@ const container = document.querySelector("#container");
 
 
 function changeGridSize() {
-    gridCount = prompt("What should be the grid resolution?");
-    gridCount = parseInt(gridCount, 10);
+    gridCount = prompt("What should be the grid resolution? Must be below 100");
+    if (gridCount<=100) {
+        gridCount = parseInt(gridCount, 10);
 
-    createGrid(gridCount);
+        createGrid(gridCount);  
+    } else {
+        alert("Invalid Value, Enter a value less than 100");
+    }
 }
 const gridSize = document.querySelector("#gridSize");
 gridSize.addEventListener("click", changeGridSize);
 
+function getRandomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
 
 function createGrid(gridCount){
     container.innerHTML = "";
@@ -19,7 +30,15 @@ function createGrid(gridCount){
     let n = gridCount*gridCount;
     for (let i=0; i<n; i++) {
         divs = document.createElement("div");
-        divs.classList.add("divs")
+        divs.classList.add("divs");
+
+        divs.addEventListener('mouseover', function() {
+            this.style.backgroundColor = getRandomRGB();
+        });
+
+        // divs.addEventListener('mouseout', function() {
+        //     this.style.backgroundColor = "white";
+        // });
         container.appendChild(divs);
     }
 
